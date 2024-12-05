@@ -5,8 +5,12 @@
 		<script>
 			function play()
 			{
-				document.getElementById("player").innerHTML = "<video controls><source src='" +
-				document.getElementById("player").children[0].value + "'></video>"
+				document.getElementById("player").innerHTML = 
+				(
+					document.getElementById("player").children[0].nodeName=="TEXTAREA"?
+					"<video controls><source src='" + document.getElementById("player").children[0].value + "'></video>":
+					"<textarea></textarea>"
+				);
 			}
 		</script>
 		<style>
@@ -26,7 +30,7 @@
 	<div id="player"><textarea></textarea></div>
 	<br><br><br>
 	<div>
-		<button onclick="play()">Play</button>
+		<button onclick="play()">PLAY</button>
 	</div>
 	</body>
 </html>
