@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script>
+			function play()
+			{
+				document.getElementById("player").innerHTML = "<video controls><source src='" +
+				document.getElementById("player").children[0].value + "'></video>"
+			}
+		</script>
+		<style>
+			textarea, video
+			{
+				height: 50%;
+				width: 100%;
+			}
+			button
+			{
+				font-size: 100px;
+			}
+			#control
+			{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="player"><textarea></textarea></div>
+	<div id="control">
+		<button onclick="play()">Play</button>
+	</div>
+	</body>
+</html>
